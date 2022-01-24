@@ -1,36 +1,106 @@
 body{
   @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
   font-family: 'DotGothic16', sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: #483D8B;
+  }
 
 h1{
   text-align: center;
   margin-top: 50px;
   margin-bottom: 25px;
-  color: darkblue;
-}
+  color: white;
+  }
 
 .text_about{
-  width: 75%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightblue;
-}
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  color: white;
+  }
 
 .text_about>p{
   margin-bottom: 28px;
   text-indent: 1.5em;
-}
-
+  }
+/*div калькулятора*/
 .calculator_all{
-
+  width: 400px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #483D8B;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 1px 5px 5px 1px rgba(0,0,0,0.5), 1px 5px 5px 1px rgba(0,0,0,0.8);
 }
 
-.calculator_output{
+/*сетка калькулятора*/
+.calculator-grid {
+  margin-top: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(50px, auto) repeat(5, 50px);
+  }
 
+/*обнуляем всё*/
+button{
+      appearance: none;
+      border: 0;
+      border-radius: 0;
+      background: #ccc;
+  }
+
+/*кнопки в калькуляторе*/
+.calculator-grid > button {
+  margin: 2px;
+  font-size: 28px;
+  border: 1px, solid lightgrey;
+  border-radius: 5px;
+  background-color: white;
+  }
+
+/*наведение мыши*/
+.calculator-grid > button:hover {
+  background-color: #6A5ACD;
+  color: white;
+  }
+
+/*клик*/
+.calculator-grid > button:active {
+  background-color: #6A5ACD;
+  color: white;
+  border: 3px solid white;
 }
+
+/*окно вывода*/
+.output{
+  grid-column: 1 / -1;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  height: 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 2px, solid black;
+  border-radius: 7px;
+  }
+
 .big_button{
-  
-}
+  grid-column: span 2;
+  }
